@@ -1,0 +1,22 @@
+package com.my;
+
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.context.annotation.Bean;
+import org.springframework.web.client.RestTemplate;
+
+
+@SpringBootApplication
+public class MovieCatApplication {
+	
+	
+	public static void main(String[] args) {
+		SpringApplication.run(MovieCatApplication.class, args);
+		System.out.println("Movie cat started");
+	}
+	@Bean
+	public RestTemplate getRestTemplate() {
+		return new RestTemplate();
+	}
+
+}
